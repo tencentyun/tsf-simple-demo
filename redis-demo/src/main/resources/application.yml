@@ -1,0 +1,13 @@
+server:
+  port: 18100
+spring:
+  application:
+    name: redis-demo
+logging:
+  file: /tsf-demo-logs/${spring.application.name}/root.log
+  level:
+    root: INFO
+
+tsf:
+  swagger:
+    enabled: false
