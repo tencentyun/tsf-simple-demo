@@ -1,0 +1,21 @@
+server:
+  port: 18085
+spring:
+  application:
+    name: cmq-consumer-demo
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: test-topic
+        output:
+          destination: test-topic
+      cmq:
+        bindings:
+          input:
+            consumer:
+              pollingWaitSeconds: 3
+        binder:
+          secretId: 
+          secretKey: 
+          endpoint: 
