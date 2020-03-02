@@ -19,8 +19,8 @@ public class ConsumerController {
 	private RestTemplate restTemplate;
 	@Autowired
 	private AsyncRestTemplate asyncRestTemplate;
-	@Autowired
-	private ProviderService providerService;
+    @Autowired
+    private ProviderService providerService;
 	@Autowired
 	private ProviderDemoService providerDemoService;
 	@Autowired
@@ -32,7 +32,7 @@ public class ConsumerController {
 							   @RequestParam(required = false) String tagValue) {
 		if (!StringUtils.isEmpty(tagName)) {
 			TsfContext.putTag(tagName, tagValue);
-			TsfContext.putCustomMetadata(new CustomMetadata(tagName, tagValue));
+            TsfContext.putCustomMetadata(new CustomMetadata(tagName, tagValue));
 		}
 		return restTemplate.getForObject("http://provider-demo/echo/" + str, String.class);
 	}
@@ -61,16 +61,16 @@ public class ConsumerController {
 		return providerDemoService.echo(str);
 	}
 
-	@RequestMapping(value = "/echo-feign-url/{str}", method = RequestMethod.GET)
-	public String feignUrlProvider(@PathVariable String str,
-								@RequestParam(required = false) String tagName,
-								@RequestParam(required = false) String tagValue) {
-		if (!StringUtils.isEmpty(tagName)) {
-			TsfContext.putTag(tagName, tagValue);
+    @RequestMapping(value = "/echo-feign-url/{str}", method = RequestMethod.GET)
+    public String feignUrlProvider(@PathVariable String str,
+                                   @RequestParam(required = false) String tagName,
+                                   @RequestParam(required = false) String tagValue) {
+        if (!StringUtils.isEmpty(tagName)) {
+            TsfContext.putTag(tagName, tagValue);
             TsfContext.putCustomMetadata(new CustomMetadata(tagName, tagValue));
-		}
-		return providerService.echo(str);
-	}
+        }
+        return providerService.echo(str);
+    }
 
 	@RequestMapping(value = "/user-feign", method = RequestMethod.GET)
 	public String feignMeshUser(@RequestParam(required = false) String tagName,

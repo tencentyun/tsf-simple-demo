@@ -17,7 +17,7 @@ public class CmqService {
 
     @StreamListener(Processor.INPUT)
     public void handle(String value) {
-        LOG.info("cmq-consumer-demo auto test, get username from mq: [" + value + "]");
+        LOG.info("consumer-demo auto test, get username from mq: [" + value + "]");
         return;
     }
 

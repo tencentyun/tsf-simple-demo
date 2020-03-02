@@ -2,15 +2,16 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.tencent.tsf</groupId>
-        <artifactId>tsf-demo</artifactId>
-        <version>1.19.0-Finchley-RELEASE</version>
+        <artifactId>spring-cloud-tsf-dependencies</artifactId>
+        <version>1.19.0-Greenwich-RELEASE</version>
+        <relativePath/>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>scg-demo</artifactId>
+
     <name>Spring Cloud Gateway Server</name>
 
     <properties>
@@ -66,17 +67,6 @@
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
 
-        <!--tracing & monitoring-->
-        <dependency>
-            <groupId>com.tencent.tsf</groupId>
-            <artifactId>spring-cloud-tsf-sleuth</artifactId>
-        </dependency>
-        <!--<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-sleuth</artifactId>
-            <version>2.0.2.RELEASE</version>
-        </dependency>-->
-
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
@@ -106,7 +96,7 @@
 
     </dependencies>
 
-    <!--<build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -116,5 +106,5 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>-->
+    </build>
 </project>

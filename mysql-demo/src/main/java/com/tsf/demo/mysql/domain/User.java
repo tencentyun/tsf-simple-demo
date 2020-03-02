@@ -1,7 +1,7 @@
 package com.tsf.demo.mysql.domain;
 
 /**
- * Created by chazling on 2019/7/17.
+ * Created by chazling on 2019/7/16.
  */
 public class User {
 

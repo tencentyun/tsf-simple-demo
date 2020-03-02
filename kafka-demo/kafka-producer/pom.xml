@@ -5,11 +5,12 @@
     <parent>
         <artifactId>kafka-demo</artifactId>
         <groupId>com.tencent.tsf</groupId>
-        <version>1.19.0-Edgware-RELEASE</version>
+        <version>1.19.0-Greenwich-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>kafka-producer</artifactId>
     <name>kafka-producer</name>
     <packaging>jar</packaging>
+
 </project>

@@ -1,10 +1,12 @@
 package com.tsf.demo.mysql;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.tencent.tsf.monitor.annotation.EnableTsfMonitor;
+import com.tencent.tsf.sleuth.annotation.EnableTsfSleuth;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.tsf.route.annotation.EnableTsfRoute;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -21,9 +23,11 @@ import java.sql.SQLException;
 @EnableTsfAuth
 @EnableTsfRoute
 @EnableTsfRateLimit
+@EnableTsfSleuth
+@EnableTsfMonitor
 public class MysqlDemoApplication {
 
-	// 测试用户自定义DataSource时开启
+    // 测试用户自定义DataSource时开启
 	/*@Bean
 	//@Primary  //在同样的DataSource中，首先使用被标注的DataSource
 	public DataSource dataSource() throws SQLException {

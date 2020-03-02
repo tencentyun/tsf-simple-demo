@@ -17,5 +17,5 @@ spring:
               pollingWaitSeconds: 3
         binder:
           secretId: 
-          secretKey: 
+          secretKey:
           endpoint: 

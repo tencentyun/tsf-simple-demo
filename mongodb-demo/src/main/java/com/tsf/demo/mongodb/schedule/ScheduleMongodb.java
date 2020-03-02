@@ -19,9 +19,9 @@ public class ScheduleMongodb {
     @Autowired
     private MongoDbService mongoDbService;
 
-    private static User user = new User((long)100,"mongodb-auto-test",26,"man","深圳");
+    private static  User user = new User((long)100,"mongodb-auto-test",26,"man","深圳");
 
-    private static User userUpdater = new User((long)100,"mongodb-auto-test",23,"girl","上海");
+    private static  User userUpdater = new User((long)100,"mongodb-auto-test",23,"girl","上海");
 
     private static HttpEntity<User> request = new HttpEntity<>(user);
 
