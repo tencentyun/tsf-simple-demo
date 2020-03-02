@@ -1,0 +1,18 @@
+apache:
+  rocketmq:
+    consumer:
+      pushConsumer: myConsumer
+    producer:
+      producerGroup: myProducer
+    name-server: 127.0.0.1:9876 #172.27.16.43
+    topic: long-topic
+server:
+  port: 18081
+spring:
+  application:
+    name: rocketmq-consumer
+tsf:
+  swagger:
+    enabled: false
+tct:
+  enabled: false
