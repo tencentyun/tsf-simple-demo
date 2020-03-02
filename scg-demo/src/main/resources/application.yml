@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  error:
+    include-exception: true
+spring:
+  application:
+    name: sc-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: false
+#    consul:
+#        host: 127.0.0.1
+#        port: 8500
+#        enabled: true
+#        scheme: HTTP
+    httpclient:
+        connect-timeout: 10
+        response-timeout: 20s
+
+logging:
+  file: /var/logs/${spring.application.name}/${spring.application.name}.log
+  level:
+    root: INFO
+    com.tencent.tsf: INFO
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 3000

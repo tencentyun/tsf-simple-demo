@@ -1,0 +1,9 @@
+server:
+  port: 18083
+spring:
+  application:
+    name: consumer-demo
+#开启Hystrix时启用
+#feign:
+#  hystrix:
+#    enabled: true

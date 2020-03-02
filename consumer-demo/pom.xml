@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tencent.tsf</groupId>
+		<artifactId>tsf-demo</artifactId>
+		<version>1.18.1-Finchley-RELEASE</version>
+	</parent>
+
+	<artifactId>consumer-demo</artifactId>
+	<packaging>jar</packaging>
+	<name>consumer-demo</name>
+
+	<dependencies>
+		<!-- TSF 启动器 -->
+		<dependency>
+			<groupId>com.tencent.tsf</groupId>
+			<artifactId>spring-cloud-tsf-starter</artifactId>
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.springframework.boot</groupId>-->
+<!--					<artifactId>spring-boot-starter-logging</artifactId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
+		</dependency>
+
+<!--		&lt;!&ndash;log4j&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-log4j</artifactId>-->
+<!--			<version>1.3.8.RELEASE</version>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash;log4j2&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-log4j2</artifactId>-->
+<!--			<version>2.1.6.RELEASE</version>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash;log4j2&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>commons-logging</groupId>-->
+<!--			<artifactId>commons-logging</artifactId>-->
+<!--			<version>1.2</version>-->
+<!--		</dependency>-->
+
+	</dependencies>
+</project>

@@ -1,0 +1,4 @@
+logging:
+  file: /tsf-demo-logs/${spring.application.name}/root.log
+  level:
+    root: INFO
