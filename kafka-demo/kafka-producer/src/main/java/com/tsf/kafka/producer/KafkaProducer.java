@@ -1,14 +1,15 @@
-package com.tencent.tsf.consumer;
+package com.tsf.kafka.producer;
 
+import com.tencent.tsf.monitor.annotation.EnableTsfMonitor;
+import com.tencent.tsf.sleuth.annotation.EnableTsfSleuth;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.tsf.route.annotation.EnableTsfRoute;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.tsf.auth.annotation.EnableTsfAuth;
 import org.springframework.tsf.ratelimit.annotation.EnableTsfRateLimit;
-
 
 @SpringBootApplication
 @EnableDiscoveryClient // 使用服务注册发现时请启用
@@ -17,10 +18,11 @@ import org.springframework.tsf.ratelimit.annotation.EnableTsfRateLimit;
 @EnableTsfAuth
 @EnableTsfRoute
 @EnableTsfRateLimit
-public class KafkaConsumer {
-
+@EnableTsfSleuth
+@EnableTsfMonitor
+public class KafkaProducer {
 
     public static void main(String[] args) {
-        SpringApplication.run(KafkaConsumer.class, args);
+        SpringApplication.run(KafkaProducer.class, args);
     }
 }

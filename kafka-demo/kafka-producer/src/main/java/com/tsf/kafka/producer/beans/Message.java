@@ -1,4 +1,4 @@
-package com.tencent.tsf.producer.beans;
+package com.tsf.kafka.producer.beans;
 
 
 import java.util.Date;

@@ -1,9 +1,11 @@
-package com.tencent.tsf.producer;
+package com.tsf.demo.redis;
 
+import com.tencent.tsf.monitor.annotation.EnableTsfMonitor;
+import com.tencent.tsf.sleuth.annotation.EnableTsfSleuth;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.tsf.route.annotation.EnableTsfRoute;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.tsf.auth.annotation.EnableTsfAuth;
@@ -16,9 +18,12 @@ import org.springframework.tsf.ratelimit.annotation.EnableTsfRateLimit;
 @EnableTsfAuth
 @EnableTsfRoute
 @EnableTsfRateLimit
-public class KafkaProducer {
+@EnableTsfSleuth
+@EnableTsfMonitor
+public class RedisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(KafkaProducer.class, args);
+        SpringApplication.run(RedisApplication.class, args);
     }
+
 }

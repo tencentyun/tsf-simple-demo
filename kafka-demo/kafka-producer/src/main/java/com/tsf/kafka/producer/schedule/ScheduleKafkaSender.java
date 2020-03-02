@@ -1,7 +1,8 @@
-package com.tencent.tsf.producer.schedule;
+package com.tsf.kafka.producer.schedule;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.tsf.kafka.producer.beans.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,6 @@ public class ScheduleKafkaSender {
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
-
     private Gson gson = new GsonBuilder().create();
 
     private static final AtomicLong id = new AtomicLong(0);
@@ -27,7 +27,7 @@ public class ScheduleKafkaSender {
     @Scheduled(fixedDelayString = "${consumer.auto.test.interval:5000}")
     public void doWork() throws Exception{
 
-        com.tencent.tsf.producer.beans.Message  message = new com.tencent.tsf.producer.beans.Message();
+        Message message = new Message();
         message.setId(id.getAndAdd(1));
         message.setMsg(UUID.randomUUID().toString());
         message.setSendTime(new Date());
@@ -35,6 +35,6 @@ public class ScheduleKafkaSender {
 
         Thread.sleep(5);
 
-        kafkaTemplate.send("zhizhang2", gson.toJson(message));
+        kafkaTemplate.send("zhizhang3", gson.toJson(message));
     }
 }

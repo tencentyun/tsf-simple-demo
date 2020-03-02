@@ -1,4 +1,4 @@
-package com.tencent.tsf.consumer.cumsumer;
+package com.tsf.kafka.consumer.cumsumer;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
@@ -14,7 +14,7 @@ public class KafkaReceiver {
 
 
 
-    @KafkaListener(topics = {"zhizhang2"})
+    @KafkaListener(topics = "zhizhang3")
     public void listen(ConsumerRecord<?, ?> record) {
 
         Optional<?> kafkaMessage = Optional.ofNullable(record.value());

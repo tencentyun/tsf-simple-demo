@@ -1,6 +1,6 @@
-package com.tencent.tsf.producer.controller;
+package com.tsf.kafka.producer.controller;
 
-import com.tencent.tsf.producer.schedule.ScheduleKafkaSender;
+import com.tsf.kafka.producer.schedule.ScheduleKafkaSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
