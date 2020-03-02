@@ -1,0 +1,9 @@
+server:
+  port: 18760
+spring:
+  application:
+    name: task-schedule-demo
+  profiles:
+    active: prod
+logging:
+  file: /var/log/${spring.application.name}/${spring.application.name}.log
