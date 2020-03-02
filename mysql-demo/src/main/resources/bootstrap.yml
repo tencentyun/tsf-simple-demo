@@ -17,13 +17,12 @@ spring:
 #      max-wait-millis: 10000
 #      min-idle: 5
 #      initial-size: 5
-#    测试Hikari连接池时启用
-#    type: com.zaxxer.hikari.HikariDataSource
-#    hikari:
-#      connection-timeout: 30000
-#      idle-timeout: 180000
-#      maximum-pool-size: 10
-#      minimum-idle: 5
+#    测试Tomcat连接池时启用
+#    type: org.apache.tomcat.jdbc.pool.DataSource
+#    tomcat:
+#      max-active: 200
+#      max-wait: 10000
+#      test-on-borrow: true
 #    测试Druid连接池时启用
 #    type: com.alibaba.druid.pool.DruidDataSource
 #  druid:

@@ -23,6 +23,20 @@ zuul:
   host:
     socket-timeout-millis: 10000
     connect-timeout-millis: 5000
+  routes:
+    api-v1:
+      path: /v1/**
+      serviceId: provider-demo
+      stripPrefix: true
+    api-v2:
+      path: /v2/**
+      url: http://127.0.0.1:18081
+      stripPrefix: true
+    api-v3:
+      path: /*/v3/**
+      serviceId: provider-demo
+      stripPrefix: true
+  ignored-patterns: /**/ignore/**
 hystrix:
   command:
     default:

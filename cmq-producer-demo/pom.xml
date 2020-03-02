@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.tencent.tsf</groupId>
 		<artifactId>tsf-demo</artifactId>
-		<version>1.19.0-Edgware-RELEASE</version>
+		<version>1.19.0-Finchley-RELEASE</version>
 	</parent>
 
 	<artifactId>cmq-producer-demo</artifactId>
@@ -19,7 +19,7 @@
 	</properties>
 
     <dependencies>
-        <!-- TSF启动器 包含完整依赖 -->
+        <!-- TSF 启动器 -->
         <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-starter</artifactId>
@@ -29,7 +29,7 @@
         <dependency>
             <groupId>com.qcloud</groupId>
             <artifactId>spring-cloud-stream-binder-cmq</artifactId>
-            <version>1.0.0-Ditmars-SNAPSHOT</version>
+            <version>1.0.0-Elmhurst-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

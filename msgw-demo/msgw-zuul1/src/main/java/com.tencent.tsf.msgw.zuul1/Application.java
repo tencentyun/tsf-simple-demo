@@ -3,7 +3,7 @@ package com.tencent.tsf.msgw.zuul1;
 import com.tencent.tsf.gateway.core.annotation.EnableTsfGateway;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.tsf.annotation.EnableTsf;
 
 /**

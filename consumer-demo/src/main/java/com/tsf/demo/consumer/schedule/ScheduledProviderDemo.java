@@ -33,10 +33,6 @@ public class ScheduledProviderDemo {
         LOG.info("consumer-demo auto test, response: [" + response + "]");
     }
 
-    public void doWorkFallback() {
-        LOG.info("consumer-demo auto test fallback.");
-    }
-
     // 异常熔断测试，需要测试熔断时打开注释
     @Scheduled(fixedDelayString = "${consumer.auto.test.interval:1000}")
     @TsfFaultTolerance(fallbackMethod = "doWorkFallback")
@@ -52,6 +48,10 @@ public class ScheduledProviderDemo {
 //        String response = providerDemoService.echoSlow("auto-test-slow");
 //        LOG.info("consumer-demo auto test, response: [" + response + "]");
 //    }
+
+    public void doWorkFallback() {
+        LOG.info("consumer-demo auto test fallback.");
+    }
 
     //测试URL配置FeignClient时启用
     /*@Scheduled(fixedDelayString = "${consumer.auto.test.interval:10000}")

@@ -11,11 +11,7 @@ spring:
         output:
           destination: test-topic
       cmq:
-        bindings:
-          input:
-            consumer:
-              pollingWaitSeconds: 3
         binder:
           secretId: 
           secretKey: 
-          endpoint: 
+          endpoint:

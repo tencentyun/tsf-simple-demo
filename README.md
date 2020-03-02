@@ -5,6 +5,7 @@
 |consumer-demo|TSF微服务治理服务消费者|
 |provider-demo|TSF微服务治理服务提供者|
 |zuul-demo|基于开源 Zuul 的微服务网关示例|
+|scg-demo|基于开源SpringCloudGateway的微服务网关示例|
 |cmq-producer-demo|支持CMQ 消息队列调用链的消息生产者示例|
 |cmq-consumer-demo|支持CMQ 消息队列调用链的消息消费者示例|
 |kafka-demo|支持Kafka调用链的示例，包含了消息消费者和生产者,|

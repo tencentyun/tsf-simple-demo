@@ -14,7 +14,8 @@ import javax.sql.DataSource;
 @Configuration
 public class DruidConfiguration {
     // 需要时开启，并定义CustomFilter进行测试
-    /*@Inject
+    /*
+    @Inject
     DruidConfiguration(DataSource dataSource)
     {
         //CustomFilter filter = new CustomFilter();
