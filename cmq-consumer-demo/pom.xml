@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tencent.tsf</groupId>
+		<artifactId>tsf-demo</artifactId>
+		<version>1.19.0-Edgware-RELEASE</version>
+	</parent>
+
+	<artifactId>cmq-consumer-demo</artifactId>
+	<packaging>jar</packaging>
+	<name>cmq-consumer-demo</name>
+	<description>Demo for TSF Cmq Messaging</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<!-- TSF启动器 包含完整依赖 -->
+		<dependency>
+			<groupId>com.tencent.tsf</groupId>
+			<artifactId>spring-cloud-tsf-starter</artifactId>
+		</dependency>
+
+        <!-- 需要使用CMQ -->
+        <dependency>
+            <groupId>com.qcloud</groupId>
+            <artifactId>spring-cloud-stream-binder-cmq</artifactId>
+            <version>1.0.0-Ditmars-SNAPSHOT</version>
+        </dependency>
+	</dependencies>
+
+</project>

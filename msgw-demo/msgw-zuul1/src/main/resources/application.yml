@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: msgw-zuul1
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 5000
+
+logging:
+  file: /tsf-demo-logs/${spring.application.name}/root.log
+  level:
+    root: INFO

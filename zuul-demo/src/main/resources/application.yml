@@ -1,0 +1,34 @@
+server:
+  port: 18000
+spring:
+  application:
+    name: zuul-demo
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        heartbeat:
+          enabled: true
+          ttl-value: 5
+          ttl-unit: s
+        preferIpAddress: true
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 5000
+zuul:
+  max:
+    host:
+      connections: 500
+  host:
+    socket-timeout-millis: 10000
+    connect-timeout-millis: 5000
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
