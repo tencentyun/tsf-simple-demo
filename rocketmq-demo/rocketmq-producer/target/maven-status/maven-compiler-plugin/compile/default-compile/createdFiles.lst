@@ -1,4 +1,0 @@
-com\tsf\rocketmq\producer\ProducerConfiguration\ProducerConfiguration.class
-com\tsf\rocketmq\producer\controller\ProducerController.class
-com\tsf\rocketmq\producer\ProducerApplication.class
-com\tsf\rocketmq\producer\service\RocketmqService.class
