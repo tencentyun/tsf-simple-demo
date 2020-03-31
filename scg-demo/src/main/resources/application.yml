@@ -19,6 +19,9 @@ spring:
     httpclient:
         connect-timeout: 10
         response-timeout: 20s
+  autoconfigure:
+    # 需要去掉这两个自动配置类，在后续SDK版本中会优化掉。
+    exclude: org.springframework.tsf.core.config.ListenerConfiguration,org.springframework.tsf.core.config.ContextConfiguration
 
 logging:
   file: /var/logs/${spring.application.name}/${spring.application.name}.log
