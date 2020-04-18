@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.tencent.tsf</groupId>
         <artifactId>tsf-demo</artifactId>
+        <groupId>com.tencent.tsf</groupId>
         <version>1.21.0-Finchley-RELEASE</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mongodb-demo</artifactId>
-    <packaging>jar</packaging>
-    <name>mongodb-demo</name>
-    <description>Demo project for Spring Boot</description>
+    <artifactId>rocketmq-demo</artifactId>
+    <name>rocketmq-demo</name>
+    <modules>
+        <module>rocketmq-producer</module>
+        <module>rocketmq-consumer</module>
+    </modules>
+    <packaging>pom</packaging>
+
 
     <properties>
         <java.version>1.8</java.version>
@@ -24,10 +29,11 @@
             <artifactId>spring-cloud-tsf-starter</artifactId>
         </dependency>
 
+        <!--RocketMQ-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>4.4.0</version>
         </dependency>
     </dependencies>
-
 </project>

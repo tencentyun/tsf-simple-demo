@@ -5,20 +5,18 @@
 	<parent>
 		<groupId>com.tencent.tsf</groupId>
 		<artifactId>spring-cloud-tsf-dependencies</artifactId>
-		<version>1.20.0-Finchley-RELEASE</version>
+		<version>1.21.0-Finchley-RELEASE</version>
 	</parent>
 
 	<groupId>com.tencent.tsf</groupId>
 	<artifactId>tsf-demo</artifactId>
-	<version>1.20.0-Finchley-RELEASE</version>
+	<version>1.21.0-Finchley-RELEASE</version>
 	<packaging>pom</packaging>
 
 	<modules>
 		<module>provider-demo</module>
 		<module>consumer-demo</module>
 		<module>zuul-demo</module>
-		<module>cmq-producer-demo</module>
-		<module>cmq-consumer-demo</module>
 		<module>mysql-demo</module>
 		<module>redis-demo</module>
 		<module>mongodb-demo</module>
@@ -26,7 +24,8 @@
 		<module>scg-demo</module>
 		<module>msgw-demo</module>
 		<module>task-schedule-demo</module>
-	</modules>
+        <module>rocketmq-demo</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
