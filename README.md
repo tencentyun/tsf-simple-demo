@@ -13,7 +13,7 @@
 |mysql-demo|支持MySQL调用链的微服务示例|
 |redis-demo|支持Redis调用链的微服务示例|
 |msgw-demo|基于 TSF SDK 的微服务网关示例|
-|task-schedule-demo|基于 TSF SDK 的微服务网关示例|
+|task-schedule-demo|分布式任务调度DEMO|
 
 ## 依赖说明
 
