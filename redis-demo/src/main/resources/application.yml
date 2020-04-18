@@ -11,3 +11,5 @@ logging:
 tsf:
   swagger:
     enabled: false
+tct:
+  enabled: false

@@ -5,4 +5,6 @@ logging:
 management:
   security:
     enabled: false
+tct:
+  enabled: false
 

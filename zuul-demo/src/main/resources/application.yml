@@ -32,3 +32,5 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 30000
+tct:
+  enabled: false

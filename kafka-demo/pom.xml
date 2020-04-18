@@ -9,7 +9,7 @@
     <parent>
         <artifactId>tsf-demo</artifactId>
         <groupId>com.tencent.tsf</groupId>
-        <version>1.20.0-Edgware-RELEASE</version>
+        <version>1.21.0-Edgware-RELEASE</version>
     </parent>
 
     <artifactId>kafka-demo</artifactId>
