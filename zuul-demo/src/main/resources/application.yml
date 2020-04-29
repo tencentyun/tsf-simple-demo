@@ -13,6 +13,8 @@ spring:
           ttl-value: 5
           ttl-unit: s
         preferIpAddress: true
+tct:
+  enabled: false
 ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 5000

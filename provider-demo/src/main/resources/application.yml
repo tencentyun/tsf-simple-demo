@@ -2,4 +2,5 @@ logging:
   file: /tsf-demo-logs/${spring.application.name}/root.log
   level:
     root: INFO
-    #com.tencnt.tsf.swagger: DEBUG
+tct:
+  enabled: false

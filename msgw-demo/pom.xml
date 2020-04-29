@@ -5,7 +5,7 @@
   <parent>
     <artifactId>tsf-demo</artifactId>
     <groupId>com.tencent.tsf</groupId>
-    <version>1.21.0-Finchley-RELEASE</version>
+    <version>1.22.0-Finchley-RELEASE</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -14,8 +14,7 @@
   <packaging>pom</packaging>
 
   <modules>
-    <!--TBD-->
-    <!--<module>msgw-scg</module>-->
     <module>msgw-zuul1</module>
+    <module>msgw-scg</module>
   </modules>
 </project>

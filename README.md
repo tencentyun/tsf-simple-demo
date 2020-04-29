@@ -6,14 +6,11 @@
 |provider-demo|TSF微服务治理服务提供者|
 |zuul-demo|基于开源 Zuul 的微服务网关示例|
 |scg-demo|基于开源SpringCloudGateway的微服务网关示例|
-|rocketmq-producer|支持rocketmq 消息队列调用链的消息生产者示例|
-|rocketmq-consumer|支持rocketmq 消息队列调用链的消息消费者示例|
-|kafka-demo|支持Kafka调用链的示例，包含了消息消费者和生产者,|
+|kafka-demo|支持Kafka调用链的示例，包含了消息消费者和生产者|
 |mongodb-demo|支持MongoDB调用链的微服务示例|
 |mysql-demo|支持MySQL调用链的微服务示例|
 |redis-demo|支持Redis调用链的微服务示例|
 |msgw-demo|基于 TSF SDK 的微服务网关示例|
-|task-schedule-demo|分布式任务调度DEMO|
 
 ## 依赖说明
 
@@ -27,20 +24,18 @@ pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud Finc
     <parent>
         <groupId>com.tencent.tsf</groupId>
         <artifactId>spring-cloud-tsf-dependencies</artifactId>
-        <version>1.21.0-Finchley-RELEASE</version>
+        <version>1.18.0-Edgware-RELEASE</version>
     </parent>
 
     <groupId>com.tencent.tsf</groupId>
     <artifactId>tsf-demo</artifactId>
-    <version>1.21.0-Finchley-RELEASE</version>
+    <version>1.18.0-Edgware-RELEASE</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>provider-demo</module>
         <module>consumer-demo</module>
         <module>zuul-demo</module>
-        <module>cmq-producer-demo</module>
-        <module>cmq-consumer-demo</module>
         <module>mysql-demo</module>
         <module>redis-demo</module>
         <module>mongodb-demo</module>
