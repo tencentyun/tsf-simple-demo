@@ -32,7 +32,7 @@ pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud Gree
 
     <groupId>com.tencent.tsf</groupId>
     <artifactId>tsf-demo</artifactId>
-    <version>1.21.0-Greenwich-RELEASE</version>
+    <version>1.22.0-Greenwich-RELEASE</version>
     <packaging>pom</packaging>
 
     <modules>
