@@ -15,7 +15,6 @@
 	<modules>
 		<module>provider-demo</module>
 		<module>consumer-demo</module>
-		<module>msgw-demo</module>
 		<module>zuul-demo</module>
 		<module>mysql-demo</module>
 		<module>redis-demo</module>
