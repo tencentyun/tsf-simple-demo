@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.tencent.tsf</groupId>
         <artifactId>spring-cloud-tsf-dependencies</artifactId>
-        <version>1.21.0-Greenwich-RELEASE</version>
+        <version>1.22.0-Greenwich-RELEASE</version>
         <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -65,6 +65,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
+        <!--tracing & monitoring-->
+        <dependency>
+            <groupId>com.tencent.tsf</groupId>
+            <artifactId>spring-cloud-tsf-sleuth</artifactId>
         </dependency>
 
         <dependency>

@@ -5,7 +5,7 @@
    <parent>
          <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-parent</artifactId>
-        <version>1.21.0-Greenwich-RELEASE</version>
+        <version>1.22.0-Greenwich-RELEASE</version>
         <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -25,10 +25,10 @@
             <artifactId>spring-cloud-tsf-consul-discovery</artifactId>
         </dependency>
 
-        <!-- spring-boot-starter -->
+        <!-- spring-cloud-starter -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
         </dependency>
 
         <!-- spring-boot-starter -->

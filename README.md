@@ -4,6 +4,7 @@
 |---|---|
 |consumer-demo|TSF微服务治理服务消费者|
 |provider-demo|TSF微服务治理服务提供者|
+|msgw-demo|基于TSF Spring Cloud MS Gateway 网关示例|
 |zuul-demo|基于开源 Zuul 的微服务网关示例|
 |scg-demo|基于开源SpringCloudGateway的微服务网关示例|
 |rocketmq-producer|支持rocketmq 消息队列调用链的消息生产者示例|
@@ -26,7 +27,7 @@ pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud Gree
     <parent>
         <groupId>com.tencent.tsf</groupId>
         <artifactId>spring-cloud-tsf-dependencies</artifactId>
-        <version>1.21.0-Greenwich-RELEASE</version>
+        <version>1.22.0-Greenwich-RELEASE</version>
     </parent>
 
     <groupId>com.tencent.tsf</groupId>

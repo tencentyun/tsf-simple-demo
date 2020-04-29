@@ -5,25 +5,27 @@
 	<parent>
 		<groupId>com.tencent.tsf</groupId>
 		<artifactId>spring-cloud-tsf-dependencies</artifactId>
-		<version>1.21.0-Greenwich-RELEASE</version>
+		<version>1.22.0-Greenwich-RELEASE</version>
 	</parent>
 
 	<artifactId>tsf-demo</artifactId>
-	<version>1.21.0-Greenwich-RELEASE</version>
+	<version>1.22.0-Greenwich-RELEASE</version>
 	<packaging>pom</packaging>
 
 	<modules>
 		<module>provider-demo</module>
 		<module>consumer-demo</module>
+		<module>msgw-demo</module>
 		<module>zuul-demo</module>
-        <module>mysql-demo</module>
+		<module>mysql-demo</module>
 		<module>redis-demo</module>
 		<module>mongodb-demo</module>
 		<module>kafka-demo</module>
-        <module>scg-demo</module>
+		<module>scg-demo</module>
 		<module>rocketmq-demo</module>
 		<module>task-schedule-demo</module>
-    </modules>
+		<module>msgw-demo</module>
+	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,20 +33,6 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-	<dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>2.0.7.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-hystrix</artifactId>
-                <version>1.4.7.RELEASE</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
 	<build>
 		<plugins>
