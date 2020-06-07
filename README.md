@@ -24,12 +24,12 @@ pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud Finc
     <parent>
         <groupId>com.tencent.tsf</groupId>
         <artifactId>spring-cloud-tsf-dependencies</artifactId>
-        <version>1.18.0-Edgware-RELEASE</version>
+        <version>1.22.0-Edgware-RELEASE</version>
     </parent>
 
     <groupId>com.tencent.tsf</groupId>
     <artifactId>tsf-demo</artifactId>
-    <version>1.18.0-Edgware-RELEASE</version>
+    <version>1.22.0-Edgware-RELEASE</version>
     <packaging>pom</packaging>
 
     <modules>
