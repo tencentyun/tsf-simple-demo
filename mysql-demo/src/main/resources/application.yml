@@ -1,0 +1,10 @@
+logging:
+  file: /tsf-demo-logs/${spring.application.name}/root.log
+  level: 
+    root: INFO
+management:
+  security:
+    enabled: false
+
+tct:
+  enabled: false

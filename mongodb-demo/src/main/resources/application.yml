@@ -1,0 +1,20 @@
+server:
+  port: 18101
+spring:
+  application:
+    name: mongodb-demo
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+
+
+logging:
+  file: /tsf-demo-logs/${spring.application.name}/root.log
+  level:
+    root: INFO
+
+tsf:
+  swagger:
+    enabled: false
+tct:
+  enabled: false

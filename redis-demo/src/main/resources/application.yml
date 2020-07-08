@@ -1,0 +1,36 @@
+server:
+  port: 18100
+spring:
+  application:
+    name: redis-demo
+  cache:
+    type: redis
+
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password:
+  cache:
+    database: 0
+  session:
+    database: 1
+  lettuce:
+    pool:
+      max-active: 8
+      max-wait: 10000
+      max-idle: 4
+      min-idle: 0
+    shutdown-timeout: 4000
+  timeout: 10000
+
+logging:
+  file: /tsf-demo-logs/${spring.application.name}/root.log
+  level:
+    root: INFO
+
+tsf:
+  swagger:
+    enabled: false
+tct:
+  enabled: false
