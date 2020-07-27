@@ -20,10 +20,10 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-consul-discovery</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- spring-cloud-starter -->
         <dependency>
