@@ -1,5 +1,5 @@
 server:
-  port: 18760
+  port: 18110
 spring:
   application:
     name: task-schedule-demo
@@ -7,3 +7,5 @@ spring:
     active: prod
 logging:
   file: /var/log/${spring.application.name}/${spring.application.name}.log
+tct:
+  enabled: true
