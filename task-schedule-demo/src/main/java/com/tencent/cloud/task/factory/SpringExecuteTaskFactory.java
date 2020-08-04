@@ -1,10 +1,10 @@
 package com.tencent.cloud.task.factory;
 
-import com.tencent.cloud.task.worker.DefaultTaskFactory;
-import com.tencent.cloud.task.worker.exception.InstancingException;
-import com.tencent.cloud.task.worker.model.ExecutableTaskData;
-import com.tencent.cloud.task.worker.spi.ExecutableTask;
-import com.tencent.cloud.task.worker.spi.ExecutableTaskFactory;
+import com.tencent.cloud.task.sdk.client.DefaultTaskFactory;
+import com.tencent.cloud.task.sdk.client.exception.InstancingException;
+import com.tencent.cloud.task.sdk.client.model.ExecutableTaskData;
+import com.tencent.cloud.task.sdk.client.spi.ExecutableTask;
+import com.tencent.cloud.task.sdk.client.spi.ExecutableTaskFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -26,7 +26,8 @@ public class SpringExecuteTaskFactory implements ExecutableTaskFactory, Applicat
     @Override
     public ExecutableTask newExecutableTask(ExecutableTaskData executableTaskData) throws InstancingException {
         try {
-            ExecutableTask executableTask = applicationContext.getBean(executableTaskData.getTaskContent(),ExecutableTask.class);
+            ExecutableTask executableTask = (ExecutableTask)applicationContext.getBean(Class.forName(executableTaskData.getTaskContent()));
+                    applicationContext.getBean(executableTaskData.getTaskContent(),ExecutableTask.class);
             LOG.info("generate executableTask bean SpringExecutableTaskFactory. taskName: {}", executableTaskData.getTaskContent());
             return executableTask;
         } catch (Throwable t) {

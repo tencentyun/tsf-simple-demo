@@ -20,10 +20,10 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-consul-discovery</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- spring-cloud-starter -->
         <dependency>
@@ -56,13 +56,20 @@
         </dependency>
 
        
-        <dependency>
+        <!--<dependency>
             <groupId>com.tencent.tsf</groupId>
             <artifactId>spring-cloud-tsf-schedule</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.tencent.cloud</groupId>
+            <artifactId>tct-spring-boot-starter</artifactId>
+            <version>1.1.0</version>
         </dependency>
     </dependencies>
 

@@ -1,9 +1,9 @@
 package com.tencent.cloud.task.factory;
 
-import com.tencent.cloud.task.worker.DefaultTaskFactory;
-import com.tencent.cloud.task.worker.exception.InstancingException;
-import com.tencent.cloud.task.worker.model.ExecutableTaskData;
-import com.tencent.cloud.task.worker.spi.ExecutableTask;
+import com.tencent.cloud.task.sdk.client.DefaultTaskFactory;
+import com.tencent.cloud.task.sdk.client.exception.InstancingException;
+import com.tencent.cloud.task.sdk.client.model.ExecutableTaskData;
+import com.tencent.cloud.task.sdk.client.spi.ExecutableTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
