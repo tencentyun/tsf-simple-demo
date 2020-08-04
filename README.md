@@ -10,7 +10,7 @@
 |mongodb-demo|支持MongoDB调用链的微服务示例|
 |mysql-demo|支持MySQL调用链的微服务示例|
 |redis-demo|支持Redis调用链的微服务示例|
-|msgw-demo|基于 TSF SDK 的微服务网关示例|
+|msgw-demo|TCT分布式任务调度示例|
 
 ## 依赖说明
 
