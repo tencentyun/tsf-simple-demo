@@ -1,0 +1,4 @@
+tct:
+  client:
+    properties:
+      task.factory.name: "com.tencent.cloud.task.factory.SpringExecuteTaskFactory"

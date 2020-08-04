@@ -3,15 +3,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
    <parent>
-         <groupId>com.tencent.tsf</groupId>
-            <artifactId>spring-cloud-tsf-parent</artifactId>
-        <version>1.23.0-Finchley-RELEASE</version>
-        <relativePath/>
+       <groupId>com.tencent.tsf</groupId>
+       <artifactId>spring-cloud-tsf-parent</artifactId>
+       <version>1.23.0-Finchley-RELEASE</version>
+       <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>task-schedule-demo</artifactId>
-    <version>1.0.0</version>
     <name>Task-Schedule-demo</name>
 
     <dependencies>
@@ -21,21 +20,57 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>com.tencent.tsf</groupId>
-            <artifactId>spring-cloud-tsf-starter</artifactId>
+            <artifactId>spring-cloud-tsf-consul-discovery</artifactId>
+        </dependency>-->
+
+        <!-- spring-cloud-starter -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
         </dependency>
+
+        <!-- spring-boot-starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- spring-boot-starter-actuator -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.7</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
 
+       
+        <!--<dependency>
+            <groupId>com.tencent.tsf</groupId>
+            <artifactId>spring-cloud-tsf-schedule</artifactId>
+        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.tencent.cloud</groupId>
+            <artifactId>tct-spring-boot-starter</artifactId>
+            <version>1.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>
