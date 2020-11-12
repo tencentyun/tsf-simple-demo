@@ -23,7 +23,7 @@
 		<module>opensource-scg-demo</module>
 		<module>rocketmq-demo</module>
 		<module>task-schedule-demo</module>
-		<module>tsf-msgw-demo</module>
+		<module>msgw-demo</module>
 	</modules>
 
 	<properties>

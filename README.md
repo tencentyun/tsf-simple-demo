@@ -4,7 +4,7 @@
 |---|---|
 |consumer-demo|TSF微服务治理服务消费者|
 |provider-demo|TSF微服务治理服务提供者|
-|tsf-msgw-demo|基于TSF Spring Cloud MS Gateway 网关示例|
+|msgw-demo|基于TSF Spring Cloud MS Gateway 网关示例|
 |opensource-zuul-demo|基于开源 Zuul 的微服务网关示例|
 |opensource-scg-demo|基于开源Spring Cloud Gateway的微服务网关示例|
 |rocketmq-producer|支持RocketMQ 消息队列调用链的消息生产者示例|
@@ -44,7 +44,7 @@ pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud Gree
         <module>redis-demo</module>
         <module>mongodb-demo</module>
         <module>kafka-demo</module>
-        <module>tsf-msgw-demo</module>
+        <module>msgw-demo</module>
         <module>opensource-scg-demo</module>
     </modules>
 
