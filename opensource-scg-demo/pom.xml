@@ -10,8 +10,7 @@
         <version>1.23.0-Finchley-RELEASE</version>
     </parent>
 
-    <artifactId>scg-demo</artifactId>
-    <name>Spring Cloud Gateway Server</name>
+    <artifactId>opensource-scg-demo</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

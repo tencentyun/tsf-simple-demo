@@ -6,7 +6,7 @@
 		<artifactId>tsf-demo</artifactId>
 		<version>1.23.0-Finchley-RELEASE</version>
 	</parent>
-	<artifactId>zuul-demo</artifactId>
+	<artifactId>opensource-zuul-demo</artifactId>
 
 	<dependencies>
 		<!-- TSF 启动器 -->
