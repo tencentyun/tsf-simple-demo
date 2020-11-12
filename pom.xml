@@ -15,15 +15,15 @@
 	<modules>
 		<module>provider-demo</module>
 		<module>consumer-demo</module>
-		<module>zuul-demo</module>
+		<module>opensource-zuul-demo</module>
 		<module>mysql-demo</module>
 		<module>redis-demo</module>
 		<module>mongodb-demo</module>
 		<module>kafka-demo</module>
-		<module>scg-demo</module>
+		<module>opensource-scg-demo</module>
 		<module>rocketmq-demo</module>
 		<module>task-schedule-demo</module>
-		<module>msgw-demo</module>
+		<module>tsf-msgw-demo</module>
 	</modules>
 
 	<properties>

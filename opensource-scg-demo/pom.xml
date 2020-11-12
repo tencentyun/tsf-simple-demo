@@ -10,9 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>scg-demo</artifactId>
-
-    <name>Spring Cloud Gateway Server</name>
+    <artifactId>opensource-scg-demo</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
