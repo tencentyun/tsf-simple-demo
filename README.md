@@ -4,8 +4,8 @@
 |---|---|
 |consumer-demo|TSF微服务治理服务消费者|
 |provider-demo|TSF微服务治理服务提供者|
-|zuul-demo|基于开源 Zuul 的微服务网关示例|
-|scg-demo|基于开源Spring Cloud Gateway的微服务网关示例|
+|opensource-zuul-demo|基于开源 Zuul 的微服务网关示例|
+|opensource-scg-demo|基于开源Spring Cloud Gateway的微服务网关示例|
 |kafka-demo|支持Kafka调用链的示例，包含了消息消费者和生产者|
 |mongodb-demo|支持MongoDB调用链的微服务示例|
 |mysql-demo|支持MySQL调用链的微服务示例|
@@ -35,7 +35,8 @@ pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud Finc
     <modules>
         <module>provider-demo</module>
         <module>consumer-demo</module>
-        <module>zuul-demo</module>
+        <module>opensource-zuul-demo</module>
+        <module>opensource-scg-demo</module>
         <module>mysql-demo</module>
         <module>redis-demo</module>
         <module>mongodb-demo</module>
