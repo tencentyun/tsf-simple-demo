@@ -10,7 +10,8 @@
 |mongodb-demo|支持MongoDB调用链的微服务示例|
 |mysql-demo|支持MySQL调用链的微服务示例|
 |redis-demo|支持Redis调用链的微服务示例|
-|msgw-demo|TCT分布式任务调度示例|
+|msgw-demo|基于TSF Spring Cloud MS Gateway 网关示例|
+|task-schedule-demo|TCT分布式任务调度示例|
 
 ## 依赖说明
 
@@ -42,6 +43,7 @@ pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud Finc
         <module>mongodb-demo</module>
         <module>kafka-demo</module>
         <module>msgw-demo</module>
+		<module>task-schedule-demo</module>
     </modules>
 
     <properties>
