@@ -1,15 +1,16 @@
 package com.tsf.demo.provider.controller;
 
-import brave.*;
-import brave.handler.MutableSpan;
-import brave.propagation.TraceContext;
-import com.tsf.demo.provider.config.ProviderNameConfig;
-
 import java.lang.reflect.Field;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.stream.Stream;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.tsf.demo.provider.config.ProviderNameConfig;
+
+import brave.Span;
+import brave.Tracing;
+import brave.handler.MutableSpan;
+import brave.propagation.TraceContext;
 
 @RestController
 public class ProviderController {
@@ -36,6 +44,15 @@ public class ProviderController {
         String result = "request param: " + param + ", response from " + providerNameConfig.getName();
         LOG.info("provider-demo -- provider config name: [" + providerNameConfig.getName() + ']');
         LOG.info("provider-demo -- response info: [" + result + "]");
+        return result;
+    }
+    
+    @RequestMapping(value = "/echo/unit/{param}", method = RequestMethod.GET)
+    public String echoUnit(@PathVariable String param) {
+        LOG.info("provider-demo -- unit request param: [" + param + "]");
+        String result = "request param: " + param + ", response from " + providerNameConfig.getName();
+        LOG.info("provider-demo -- unit provider config name: [" + providerNameConfig.getName() + ']');
+        LOG.info("provider-demo -- unit response info: [" + result + "]");
         return result;
     }
 
