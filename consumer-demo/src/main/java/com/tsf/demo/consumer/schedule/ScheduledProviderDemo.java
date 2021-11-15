@@ -25,7 +25,7 @@ public class ScheduledProviderDemo {
     @Autowired
     private ProviderDemoService providerDemoService;
 
-    @Scheduled(fixedDelayString = "${consumer.auto.test.interval:1000}")
+    @Scheduled(fixedDelayString = "${consumer.auto.test.interval:500}")
     public void doWork() throws InterruptedException {
         TsfContext.putTag("test", "123");
         TsfContext.putCustomMetadata(new CustomMetadata("test", "123"));
