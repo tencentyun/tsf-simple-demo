@@ -5,11 +5,11 @@
 	<parent>
 		<groupId>com.tencent.tsf</groupId>
 		<artifactId>spring-cloud-tsf-dependencies</artifactId>
-		<version>1.23.0-Greenwich-RELEASE</version>
+		<version>1.29.0-Greenwich-RELEASE</version>
 	</parent>
 
 	<artifactId>tsf-demo</artifactId>
-	<version>1.23.0-Greenwich-RELEASE</version>
+	<version>1.29.0-Greenwich-RELEASE</version>
 	<packaging>pom</packaging>
 
 	<modules>
