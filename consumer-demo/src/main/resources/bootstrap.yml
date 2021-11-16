@@ -13,6 +13,8 @@ tsf_namespace_id: default_namespace
 
 #方便本地自测调试
 tsf:
+  sleuth:
+    samplerRate: 0.1
   circuit-breaker:
     rules:
       - targetServiceName: provider-demo
