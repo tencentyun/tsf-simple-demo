@@ -41,5 +41,6 @@ public class ScheduleRedis {
         String result = operations.get(key);
         LOG.info("string redis key: {}, result is: {}",key,result);
         stringRedisTemplate.delete(key);
+
     }
 }

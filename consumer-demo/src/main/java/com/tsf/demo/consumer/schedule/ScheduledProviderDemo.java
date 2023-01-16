@@ -12,7 +12,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.tsf.core.TsfContext;
 
-import com.tsf.demo.consumer.proxy.ProviderDemoService;
 
 @EnableScheduling
 @Service
@@ -25,16 +24,16 @@ public class ScheduledProviderDemo {
     @Autowired
     private ProviderDemoService providerDemoService;
 
-    @Scheduled(fixedDelayString = "${consumer.auto.test.interval:500}")
+//    @Scheduled(fixedDelayString = "${consumer.auto.test.interval:1000}")
     public void doWork() throws InterruptedException {
-        TsfContext.putTag("test", "123");
-        TsfContext.putCustomMetadata(new CustomMetadata("test", "123"));
+//        TsfContext.putTag("test", "123");
+//        TsfContext.putCustomMetadata(new CustomMetadata("test", "123"));
         String response = providerDemoService.echo("auto-test");
         LOG.info("consumer-demo auto test, response: [" + response + "]");
     }
 
     // 异常熔断测试，需要测试熔断时打开注释
-    @Scheduled(fixedDelayString = "${consumer.auto.test.interval:1000}")
+//    @Scheduled(fixedDelayString = "${consumer.auto.test.interval:1000}")
 //    @TsfFaultTolerance(fallbackMethod = "doWorkFallback")
 //    public void doWorkWithError() throws InterruptedException {
 //        String response = providerDemoService.echoError("auto-test-error");
@@ -61,11 +60,12 @@ public class ScheduledProviderDemo {
         LOG.info("consumer-demo auto test, response: [" + response + "]");
     }*/
 
-    @Scheduled(fixedDelayString = "${consumer.auto.test.interval:1000}")
-    public void doWorkTracer() throws InterruptedException {
-        TsfContext.putTag("test", "123");
-        TsfContext.putCustomMetadata(new CustomMetadata("test", "123"));
-        String response = providerDemoService.echoTracer("auto-test");
-        LOG.info("consumer-demo auto test, response: [" + response + "]");
-    }
+    //trace信息获取注入时打开
+//    @Scheduled(fixedDelayString = "${consumer.auto.test.interval:1000}")
+//    public void doWorkTracer() throws InterruptedException {
+//        TsfContext.putTag("test", "123");
+//        TsfContext.putCustomMetadata(new CustomMetadata("test", "123"));
+//        String response = providerDemoService.echoTracer("auto-test");
+//        LOG.info("consumer-demo auto test, response: [" + response + "]");
+//    }
 }

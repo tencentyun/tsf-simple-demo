@@ -8,7 +8,7 @@ spring:
     name: mysql-demo
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/tsf_test?characterEncoding=utf8&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/tsf_test?characterEncoding=utf8
     username:
     password:
 #    测试DBCP连接池时启用

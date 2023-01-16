@@ -13,17 +13,19 @@ spring:
           lower-case-service-id: false
       httpclient:
         # The connect timeout in millis, the default is 45s.
-        connectTimeout: 200
-        responseTimeout: 10s
-      # 设置msgw-scg全局代理，使用TSF API分组管理
-      routes:
-      - id: wildcard_tsf_gateway
-        uri: lb://wildcard_tsf_gateway
-        predicates:
-        - Path= /**
+        connectTimeout: 45000
+        responseTimeout: 10000
+        pool:
+          max-idle-time: 5000
+          acquire-timeout: 45000
     consul:
-        enabled: true
-        scheme: HTTP
+      enabled: true
+      scheme: HTTP
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetriesNextServer: 1
+  MaxAutoRetries: 0
 
 logging:
   file: /tsf-demo-logs/${spring.application.name}/root.log

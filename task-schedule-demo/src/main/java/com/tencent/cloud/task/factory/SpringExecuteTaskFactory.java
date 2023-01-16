@@ -26,8 +26,7 @@ public class SpringExecuteTaskFactory implements ExecutableTaskFactory, Applicat
     @Override
     public ExecutableTask newExecutableTask(ExecutableTaskData executableTaskData) throws InstancingException {
         try {
-            ExecutableTask executableTask = (ExecutableTask)applicationContext.getBean(Class.forName(executableTaskData.getTaskContent()));
-                    applicationContext.getBean(executableTaskData.getTaskContent(),ExecutableTask.class);
+            ExecutableTask executableTask = applicationContext.getBean(executableTaskData.getTaskContent(),ExecutableTask.class);
             LOG.info("generate executableTask bean SpringExecutableTaskFactory. taskName: {}", executableTaskData.getTaskContent());
             return executableTask;
         } catch (Throwable t) {

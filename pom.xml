@@ -5,26 +5,26 @@
 	<parent>
 		<groupId>com.tencent.tsf</groupId>
 		<artifactId>spring-cloud-tsf-dependencies</artifactId>
-		<version>1.23.14-Greenwich-RELEASE</version>
+		<version>1.40.7-SpringCloud2020-RELEASE</version>
 	</parent>
 
+	<groupId>com.tencent.tsf</groupId>
 	<artifactId>tsf-demo</artifactId>
-	<version>1.23.14-Greenwich-RELEASE</version>
+	<version>1.40.7-SpringCloud2020-RELEASE</version>
 	<packaging>pom</packaging>
 
 	<modules>
 		<module>provider-demo</module>
 		<module>consumer-demo</module>
-		<module>opensource-zuul-demo</module>
-		<module>mysql-demo</module>
-		<module>redis-demo</module>
-		<module>mongodb-demo</module>
-		<module>kafka-demo</module>
-		<module>opensource-scg-demo</module>
-		<module>rocketmq-demo</module>
-		<module>task-schedule-demo</module>
+<!-- 		<module>opensource-scg-demo</module> -->
+<!--		<module>mysql-demo</module>-->
+<!--		<module>redis-demo</module>-->
+<!--		<module>mongodb-demo</module>-->
+<!--		<module>kafka-demo</module>-->
 		<module>msgw-demo</module>
-	</modules>
+<!--		<module>task-schedule-demo</module>-->
+<!--        <module>rocketmq-demo</module>-->
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,15 +38,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<encoding>UTF-8</encoding>
-					<target>1.8</target>
-					<source>1.8</source>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

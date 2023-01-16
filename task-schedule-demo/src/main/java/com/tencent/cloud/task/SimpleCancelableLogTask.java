@@ -1,5 +1,6 @@
 package com.tencent.cloud.task;
 
+import com.tencent.cloud.task.sdk.core.utils.ThreadUtils;
 import com.tencent.cloud.task.sdk.client.LogReporter;
 import com.tencent.cloud.task.sdk.client.model.ExecutableTaskData;
 import com.tencent.cloud.task.sdk.client.model.ProcessResult;
@@ -8,7 +9,6 @@ import com.tencent.cloud.task.sdk.client.model.TerminateResult;
 import com.tencent.cloud.task.sdk.client.remoting.TaskExecuteFuture;
 import com.tencent.cloud.task.sdk.client.spi.ExecutableTask;
 import com.tencent.cloud.task.sdk.client.spi.TerminableTask;
-import com.tencent.cloud.task.sdk.core.utils.ThreadUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,11 +1,11 @@
 apache:
   rocketmq:
     consumer:
-      pushConsumer: myConsumer
+      pushConsumer: myConsumer-1
     producer:
-      producerGroup: myProducer
-    name-server: 172.30.0.36:9876 #172.27.16.43
-    topic: long-topic
+      producerGroup: myProducer-1
+    name-server: 127.0.0.1:9876 #172.30.0.36
+    topic: long-topic-1
 server:
   port: 18081
 spring:

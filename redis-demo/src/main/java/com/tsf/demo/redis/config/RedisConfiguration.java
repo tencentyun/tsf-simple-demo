@@ -17,7 +17,9 @@ import org.springframework.data.redis.connection.lettuce.LettuceClientConfigurat
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.connection.lettuce.LettucePoolingClientConfiguration;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.time.Duration;
@@ -83,8 +85,7 @@ public class RedisConfiguration {
     static final Jackson2JsonRedisSerializer jackson2JsonRedisSerializer =
             getJackson2JsonRedisSerializer();
 
-
-    private LettuceConnectionFactory createLettuceConnectionFactory(
+    private  LettuceConnectionFactory createLettuceConnectionFactory(
             int dbIndex, String hostName, int port, String password,
             int maxIdle,int minIdle,int maxActive,
             Long maxWait, Long timeOut,Long shutdownTimeOut){

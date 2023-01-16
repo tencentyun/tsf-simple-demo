@@ -3,10 +3,6 @@ server:
 spring:
   application:
     name: redis-demo
-logging:
-  file: /tsf-demo-logs/${spring.application.name}/root.log
-  level:
-    root: INFO
   cache:
     type: redis
 
@@ -28,6 +24,13 @@ redis:
     shutdown-timeout: 4000
   timeout: 10000
 
+logging:
+  file: /tsf-demo-logs/${spring.application.name}/root.log
+  level:
+    root: INFO
+
 tsf:
   swagger:
     enabled: false
+tct:
+  enabled: false

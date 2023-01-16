@@ -45,7 +45,7 @@ public class ScheduledDemo {
 		LOG.info("mysql-demo auto test, save mybatis user into mysql: [" + username + "]");
 		mybatisUserDao.insertUser(username, "token:" + username);
 
-		Thread.sleep(3000);
+        Thread.sleep(3000);
 
 		User user = mybatisUserDao.findUserByName(username);
 		LOG.info("mysql-demo auto test, query mybatis user token from mysql: [" + user.getUser_token() + "]");
@@ -58,7 +58,7 @@ public class ScheduledDemo {
 		index++;
 		if (index > 9) index = 1;
 
-        //测试事务时启用
+		//测试事务时启用
         //throw new RuntimeException("test-exception");
 	}
 }

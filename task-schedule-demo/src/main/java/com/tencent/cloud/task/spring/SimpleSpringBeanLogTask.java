@@ -1,10 +1,10 @@
 package com.tencent.cloud.task.spring;
 
+import com.tencent.cloud.task.sdk.core.utils.ThreadUtils;
 import com.tencent.cloud.task.sdk.client.LogReporter;
 import com.tencent.cloud.task.sdk.client.model.ExecutableTaskData;
 import com.tencent.cloud.task.sdk.client.model.ProcessResult;
 import com.tencent.cloud.task.sdk.client.spi.ExecutableTask;
-import com.tencent.cloud.task.sdk.core.utils.ThreadUtils;
 import org.springframework.stereotype.Component;
 
 @Component

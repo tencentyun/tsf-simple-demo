@@ -1,23 +1,20 @@
-## Demo 工程目录 
+## Demo 工程目录
 
 |工程名称|工程说明|
 |---|---|
 |consumer-demo|TSF微服务治理服务消费者|
 |provider-demo|TSF微服务治理服务提供者|
-|msgw-demo|基于TSF Spring Cloud MS Gateway 网关示例|
-|opensource-zuul-demo|基于开源 Zuul 的微服务网关示例|
-|opensource-scg-demo|基于开源Spring Cloud Gateway的微服务网关示例|
-|rocketmq-producer|支持RocketMQ 消息队列调用链的消息生产者示例|
-|rocketmq-consumer|支持RocketMQ 消息队列调用链的消息消费者示例|
-|kafka-demo|支持Kafka调用链的示例，包含了消息消费者和生产者,|
-|mongodb-demo|支持MongoDB调用链的微服务示例|
-|mysql-demo|支持MySQL调用链的微服务示例|
-|redis-demo|支持Redis调用链的微服务示例||
-|task-schedule-demo|TCT分布式任务调度示例|
+|~~opensource-zuul-demo~~|~~基于开源 Zuul 的微服务网关示例~~|
+|~~opensource-scg-demo~~|~~基于开源Spring Cloud Gateway的微服务网关示例~~|
+|~~kafka-demo~~|~~支持Kafka调用链的示例，包含了消息消费者和生产者~~|
+|~~mongodb-demo~~|~~支持MongoDB调用链的微服务示例~~|
+|~~mysql-demo~~|~~支持MySQL调用链的微服务示例~~|
+|~~redis-demo~~|~~支持Redis调用链的微服务示例~~|
+|msgw-demo|基于 TSF SDK 的微服务网关示例，其中msgw-scg是基于TSF Spring Cloud Gateway的微服务网关示例|
 
 ## 依赖说明
 
-pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud Greenwich 版本 SDK 举例说明）：
+pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud 2020 版本 SDK 举例说明）：
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -27,25 +24,25 @@ pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud Gree
     <parent>
         <groupId>com.tencent.tsf</groupId>
         <artifactId>spring-cloud-tsf-dependencies</artifactId>
-        <version>1.23.14-Greenwich-RELEASE</version>
+        <version>1.40.7-SpringCloud2020-RELEASE</version>
     </parent>
 
     <groupId>com.tencent.tsf</groupId>
     <artifactId>tsf-demo</artifactId>
-    <version>1.23.14-Greenwich-RELEASE</version>
+    <version>1.40.7-SpringCloud2020-RELEASE</version>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>provider-demo</module>
-        <module>consumer-demo</module>
-        <module>opensource-zuul-demo</module>
-        <module>rocketmq-demo</module>
-        <module>mysql-demo</module>
-        <module>redis-demo</module>
-        <module>mongodb-demo</module>
-        <module>kafka-demo</module>
-        <module>msgw-demo</module>
-        <module>opensource-scg-demo</module>
+	<modules>
+		<module>provider-demo</module>
+		<module>consumer-demo</module>
+<!-- 		<module>opensource-scg-demo</module> -->
+<!--		<module>mysql-demo</module>-->
+<!--		<module>redis-demo</module>-->
+<!--		<module>mongodb-demo</module>-->
+<!--		<module>kafka-demo</module>-->
+		<module>msgw-demo</module>
+<!--		<module>task-schedule-demo</module>-->
+<!--        <module>rocketmq-demo</module>-->
     </modules>
 
     <properties>

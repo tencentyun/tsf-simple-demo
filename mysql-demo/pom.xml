@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.tencent.tsf</groupId>
 		<artifactId>tsf-demo</artifactId>
-		<version>1.23.14-Greenwich-RELEASE</version>
+		<version>1.40.7-SpringCloud2020-RELEASE</version>
 	</parent>
 
 	<artifactId>mysql-demo</artifactId>

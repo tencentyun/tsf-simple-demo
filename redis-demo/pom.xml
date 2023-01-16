@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.tencent.tsf</groupId>
         <artifactId>tsf-demo</artifactId>
-        <version>1.23.14-Greenwich-RELEASE</version>
+        <version>1.40.7-SpringCloud2020-RELEASE</version>
     </parent>
 
     <artifactId>redis-demo</artifactId>
@@ -29,6 +29,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
+
         <!-- redis依赖commons-pool 这个依赖一定要添加 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
