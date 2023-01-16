@@ -14,7 +14,7 @@
 
 ## 依赖说明
 
-pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud 2020 版本 SDK 举例说明）：
+pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud 2021 版本 SDK 举例说明）：
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -24,12 +24,12 @@ pom.xml 中定义了工程需要的依赖包（以下以基于 Spring Cloud 2020
     <parent>
         <groupId>com.tencent.tsf</groupId>
         <artifactId>spring-cloud-tsf-dependencies</artifactId>
-        <version>1.40.7-SpringCloud2020-RELEASE</version>
+        <version>1.40.0-SpringCloud2021-RELEASE</version>
     </parent>
 
     <groupId>com.tencent.tsf</groupId>
     <artifactId>tsf-demo</artifactId>
-    <version>1.40.7-SpringCloud2020-RELEASE</version>
+    <version>1.40.0-SpringCloud2021-RELEASE</version>
     <packaging>pom</packaging>
 
 	<modules>
