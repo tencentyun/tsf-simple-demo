@@ -31,3 +31,6 @@ logging:
   file: /tsf-demo-logs/${spring.application.name}/root.log
   level:
     root: INFO
+  #从tsf spring cloud 202 0开始 pattern 需要配置如下，否则日志配置项解析不了
+  pattern:
+    level: "%-5level [${spring.application.name},%mdc{trace_id},%mdc{span_id},]"
