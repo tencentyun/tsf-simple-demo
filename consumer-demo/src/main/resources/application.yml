@@ -3,6 +3,9 @@ logging:
     root: INFO
   file:
     name: /tsf-demo-logs/${spring.application.name}/root.log
+  # tsf spring cloud 2021 的 pattern 需要配置如下，否则日志配置项解析不了
+  pattern:
+    level: "%-5level [${spring.application.name},%mdc{trace_id},%mdc{span_id},]"
 management:
   security:
     enabled: false
