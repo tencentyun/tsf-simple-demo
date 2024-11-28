@@ -1,6 +1,5 @@
 package com.tsf.demo.consumer.proxy;
 
-import com.tencent.tsf.unit.annotation.TsfUnitRule;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +18,4 @@ public interface ProviderDemoService {
 
     @RequestMapping(value = "/echo/slow/{str}", method = RequestMethod.GET)
     String echoSlow(@PathVariable("str") String str);
-
-    @TsfUnitRule(ruleGenerator = "com.tsf.demo.consumer.util.UserIdGenerator")
-    @RequestMapping(value = "/echo/unit/{str}", method = RequestMethod.GET)
-    String echoUnit(@PathVariable("str") String str);
 }

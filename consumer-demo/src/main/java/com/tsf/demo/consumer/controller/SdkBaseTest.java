@@ -1,6 +1,5 @@
 package com.tsf.demo.consumer.controller;
 
-import com.tencent.tsf.unit.TsfUnitContext;
 import com.tsf.demo.consumer.proxy.MeshUserService;
 import com.tsf.demo.consumer.proxy.ProviderDemoService;
 import com.tsf.demo.consumer.proxy.ProviderService;
@@ -12,11 +11,7 @@ import org.springframework.cloud.tsf.faulttolerance.model.TsfFaultToleranceStrag
 import org.springframework.tsf.core.TsfContext;
 import org.springframework.tsf.core.util.TsfSpringContextAware;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.AsyncRestTemplate;
 import org.springframework.web.client.RestTemplate;
 
@@ -52,17 +47,17 @@ public class SdkBaseTest {
     // 调用多次provider接口，每秒5次
     @RequestMapping(value = "/echo-mul-times/{num}/{str}", method = RequestMethod.GET)
     public Integer feignProvider(@PathVariable Integer num, @PathVariable String str,
-                                @RequestParam(required = false) String tagName,
-                                @RequestParam(required = false) String tagValue) throws InterruptedException {
+                                 @RequestParam(required = false) String tagName,
+                                 @RequestParam(required = false) String tagValue) throws InterruptedException {
         LOG.info("start call echo-mul-times, total nums: " + num);
         String result = "";
         int normal_num = 0;
-        for(int i = 0; i < num ; i++) {
+        for (int i = 0; i < num; i++) {
             try {
                 result = providerDemoService.echo(str);
                 normal_num = normal_num + 1;
                 LOG.info("for: call echo-once, the result is : " + result);
-            }catch(Exception e){
+            } catch (Exception e) {
                 LOG.info("call failed");
             }
 
@@ -109,11 +104,11 @@ public class SdkBaseTest {
         LOG.info("nums: " + num);
         int error_num = 0;
 
-        for (int i = 0; i < num ; i++) {
+        for (int i = 0; i < num; i++) {
             try {
                 String result = restTemplate.getForObject("http://provider-demo/echo/error/" + str, String.class);
                 LOG.info("for: call echo-once, the result is : " + result);
-            }catch(Exception e){
+            } catch (Exception e) {
                 error_num = error_num + 1;
             }
             Thread.sleep(330);
@@ -139,7 +134,7 @@ public class SdkBaseTest {
 
     // 调用多次slow（延时）接口
     @RequestMapping(value = "/echo-slow-mul/{num}/{str}", method = RequestMethod.GET)
-    public Integer slowProviderMul(@PathVariable Integer num,@PathVariable String str,
+    public Integer slowProviderMul(@PathVariable Integer num, @PathVariable String str,
                                    @RequestParam(required = false) String tagName,
                                    @RequestParam(required = false) String tagValue) throws InterruptedException {
         if (!StringUtils.isEmpty(tagName)) {
@@ -149,14 +144,14 @@ public class SdkBaseTest {
         LOG.info("start call echo-slow-once");
         int flow_num = 0;
         int error_num = 0;
-        for(int i = 0; i < num; i++) {
-            try{
+        for (int i = 0; i < num; i++) {
+            try {
                 String result = restTemplate.getForObject("http://provider-demo/echo/slow/" + str, String.class);
                 LOG.info("call echo slow, the result is : " + result);
                 // 下发到时延provider接口上的数量
-                if(result.indexOf(str) != -1 && result.indexOf("sleep") != -1)
+                if (result.indexOf(str) != -1 && result.indexOf("sleep") != -1)
                     flow_num = flow_num + 1;
-            }catch(Exception e){
+            } catch (Exception e) {
                 error_num = error_num + 1;
             }
             Thread.sleep(100);
@@ -168,13 +163,13 @@ public class SdkBaseTest {
     // 分布式配置，通过该函数来获取配置的值，以查看配置是否生效
     @RequestMapping(value = "/config/{path}/value", method = RequestMethod.GET)
     public String config(@PathVariable String path) {
-        String result = TsfSpringContextAware.getProperties(path);;
+        String result = TsfSpringContextAware.getProperties(path);
         LOG.info("get distribution config value， the value is :" + result);
         return result;
     }
 
     // 直接失败
-    @TsfFaultTolerance(strategy = TsfFaultToleranceStragety.FAIL_FAST,fallbackMethod = "restProviderFailfast")
+    @TsfFaultTolerance(strategy = TsfFaultToleranceStragety.FAIL_FAST, fallbackMethod = "restProviderFailfast")
     @RequestMapping(value = "/failfast/{str}", method = RequestMethod.GET)
     public String failFast(@PathVariable String str) {
         LOG.info("start call failfast:" + str);
@@ -236,25 +231,5 @@ public class SdkBaseTest {
         String result = "failover-exception-recall:" + str;
         LOG.info(result);
         return result;
-    }
-
-    @RequestMapping(value = "/echo-rest-unit-mul/{str}", method = RequestMethod.GET)
-    public String restUnitMul(@PathVariable String str,
-                           @RequestParam(required = false) String tagName,
-                           @RequestParam(required = false) String tagValue) {
-        if (!StringUtils.isEmpty(tagName)) {
-            String [] tag_list;
-            String [] value_list;
-            tag_list = tagName.split("-");
-            value_list = tagValue.split("-");
-            if (tag_list.length != value_list.length)
-                throw new RuntimeException("tag和value个数对应不上，以-分割");
-
-            for(int i = 0; i < tag_list.length; i++){
-                LOG.info("单元化添加 key:" + tag_list[i] + ",value:" + value_list[i]);
-                TsfUnitContext.putTag(tag_list[i], value_list[i]);
-            }
-        }
-        return restTemplate.getForObject("http://provider-demo/echo/unit/" + str, String.class);
     }
 }
