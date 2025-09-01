@@ -5,12 +5,12 @@
     <parent>
         <groupId>com.tencent.tsf</groupId>
         <artifactId>spring-cloud-tsf-dependencies</artifactId>
-        <version>1.46.17-SpringCloud2021-RELEASE</version>
+        <version>1.46.19-SpringCloud2021-RELEASE</version>
     </parent>
 
     <groupId>com.tencent.tsf</groupId>
     <artifactId>tsf-demo</artifactId>
-    <version>1.46.17-SpringCloud2021-RELEASE</version>
+    <version>1.46.19-SpringCloud2021-RELEASE</version>
     <packaging>pom</packaging>
 
     <modules>
